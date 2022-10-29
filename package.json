@@ -2,10 +2,13 @@
   "name": "web-ext-react-template",
   "version": "1.0.2",
   "private": true,
+  "engines": {
+    "node": ">=16.17.1"
+  },
   "scripts": {
-    "build": "ts-node -T build.ts --firefox --chrome",
-    "build:firefox": "ts-node -T build.ts --firefox",
-    "build:chrome": "ts-node -T build.ts --chrome",
+    "build": "tsx build.ts --firefox --chrome",
+    "build:firefox": "tsx build.ts --firefox",
+    "build:chrome": "tsx build.ts --chrome",
     "run:firefox": "web-ext run -s dist-firefox",
     "run:chrome": "web-ext run -s dist-chrome -t chromium",
     "package:firefox": "web-ext build -s dist-firefox --overwrite-dest",
@@ -31,7 +34,7 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "2.7.1",
-    "ts-node": "^10.9.1",
+    "tsx": "^3.11.0",
     "typescript": "^4.8.4",
     "web-ext": "^7.2.0"
   }
